@@ -1,0 +1,73 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.pageTop {
+  background-color: v.$colorRed;
+  height: 105px;
+  padding: 10px;
+
+  .container {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0px auto;
+    text-align: center;
+
+    .coord {
+      font-size: 28px;
+      font-weight: bold;
+      color: rgba(243, 193, 31, 1);
+      width: 25%;
+    }
+
+    .main-logo {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 80%;
+      }
+    }
+
+    .button-block {
+      width: 25%;
+
+      .button-get-started {
+        @include m.buttonGetStarted(v.$colorBlack, v.$colorYellow, v.$backgroundColorBlack, v.$colorWhite, 148px, 54px);
+      }
+    }
+  }
+}
+
+.navTopMenu {
+  background-color: v.$backgroundColorBlack;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 52px;
+
+  a {
+    font-size: 16px;
+    font-weight: bold;
+    color: v.$colorWhite;
+    margin: 0px 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+      cursor: pointer!important;
+      color: v.$colorYellow;
+    }
+  }
+}

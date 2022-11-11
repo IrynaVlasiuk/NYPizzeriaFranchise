@@ -1,0 +1,26 @@
+@use 'variables' as v;
+
+footer {
+  background-color: v.$colorRed;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+
+  .copyright {
+    color: v.$colorWhite;
+    width: 50%;
+  }
+
+  .social-wrapper {
+    .socialHubIcon {
+      width: 32px;
+      height: 35px;
+
+      .dm-social-icons-instagram {
+        &::before {
+          content: '\ea92';
+        }
+      }
+    }
+  }
+}

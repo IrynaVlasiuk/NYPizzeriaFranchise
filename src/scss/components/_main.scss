@@ -1,0 +1,653 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+#videoJoinUs {
+  .video-container {
+    position: relative;
+
+    .videobgwrapper {
+      background-attachment: initial;
+      background-size: cover;
+      background-position: 0 50%;
+      float: none;
+      top: 0;
+      left: 0;
+      max-width: 100%;
+      min-width: 0;
+      text-align: start;
+      width: 100%;
+
+      video {
+        left: 0;
+        height: auto;
+        width: 100%;
+      }
+
+      .text-video-wrapper {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 1s;
+        transition-property: none;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        margin: 0px auto;
+        text-align: center;
+        animation: 2s linear 0.5s translateTitle;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+
+        img {
+          width: 60%;
+        }
+
+        .text-video {
+          font-size: 23px;
+          color: v.$colorWhite;
+          font-weight: 700;
+          margin: 30px auto;
+          letter-spacing: 2px;
+        }
+
+        .btn.request-information {
+          @include m.buttonGetStarted(v.$colorWhite, v.$colorRed, v.$colorYellow, v.$colorWhite, 284px, 60px);
+        }
+      }
+    }
+  }
+}
+
+#businessOpportunity, #stepsToOwning {
+  background-color: v.$colorRed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -4px;
+  padding: 50px;
+
+  h3.title {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 52px;
+    color: v.$colorWhite;
+    font-weight: bold;
+    margin: 20px auto;
+  }
+
+  .description {
+    font-size: 18px;
+    width: 80%;
+    text-align: center;
+  }
+
+  .images-block {
+    margin: 50px auto;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+
+    img {
+      &:first-child {
+        height: 120px;
+      }
+
+      &:last-child {
+        height: 100px;
+      }
+    }
+  }
+
+  .button-get-started {
+    @include m.buttonGetStarted(v.$colorBlack, v.$colorWhite, v.$colorYellow, v.$colorBlack, 310px, 60px);
+  }
+}
+
+#steps {
+  background-image: url("../assets/images/new-york.png");
+  background-repeat: no-repeat;
+
+  .block-overlay {
+    background-color: rgba(92,86,36,1);
+    opacity: 0.9;
+    padding: 133px 0px;
+
+    .image-new-york {
+      display: flex;
+      width: 80%;
+      text-align: center;
+      background-position: center;
+      background-size: cover;
+      margin: 0px auto;
+      background-color: rgba(92, 86, 36, 1);
+      opacity: 0.9;
+
+      .icon-item {
+        width: 25%;
+
+        img {
+          height: 148px;
+        }
+
+        p {
+          font-size: 20px;
+          text-transform: uppercase;
+          margin-top: 10px;
+          font-weight: bold;
+          color: v.$colorWhite;
+        }
+      }
+    }
+  }
+}
+
+#profit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  text-align: center;
+
+  h3 {
+    font-size: 50px;
+    color: v.$colorRed;
+  }
+
+  h2 {
+    font-size: 50px;
+    margin: 30px auto;
+    text-transform: uppercase;
+  }
+
+  .description {
+    width: 60%;
+    margin: 30px auto;
+    font-size: 18px;
+  }
+
+  .profit-numbers {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-around;
+    margin: 50px auto;
+
+    .profit-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 33%;
+
+      p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        span {
+          margin: 3px auto;
+        }
+      }
+    }
+  }
+
+  .range-block {
+    display: flex;
+    width: 80%;
+    margin: 0px auto;
+
+    .range-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 33%;
+
+      p {
+        &:first-child {
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .button-block {
+    margin: 50px auto;
+
+    .button-get-started {
+      @include m.buttonGetStarted(v.$colorWhite, v.$colorRed, v.$colorYellow, v.$colorBlack, 310px, 60px);
+    }
+  }
+}
+
+#franchiseInfo {
+  background-color: v.$colorRed;
+  width: 100%;
+
+  .first-block {
+    display: flex;
+    width: 100%;
+
+    .image-container {
+      width: 60%;
+      position: relative;
+
+      .img-block {
+        background-image: url("../assets/images/vespa-deliver.png");
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 620px;
+        position: relative;
+      }
+    }
+  }
+
+  .text-container {
+    width: 40%;
+    position: relative;
+    max-height: 620px;
+
+    .text-block {
+      width: 100%;
+      background-color: v.$colorYellow;
+      padding: 50px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+
+      h3 {
+        font-size: 18px;
+        letter-spacing: 2px;
+      }
+
+      h2 {
+        margin: 30px 0px;
+        font-size: 65px;
+      }
+
+      .description {
+        font-size: 17px;
+      }
+
+      .button-block {
+        margin-top: 20px;
+
+        .button-get-started {
+          @include m.buttonGetStarted(v.$colorWhite, v.$colorRed, v.$colorWhite, v.$colorBlack, 148px, 54px);
+        }
+      }
+    }
+  }
+
+  .second-block {
+    display: flex;
+    width: 100%;
+    margin-top: -2px;
+
+    .text-container {
+      width: 40%;
+      display: flex;
+
+      .text-block {
+        width: 100%;
+        position: relative;
+      }
+    }
+
+    .slider-container {
+      width: 60%;
+      height: 620px;
+      position: relative;
+
+      .slider-block {
+        position: relative;
+        height: 620px;
+
+        .slider-item {
+          transition: opacity 0.5s linear;
+          width: 100%;
+          position: absolute;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .title {
+        color: v.$colorWhite;
+        text-align: center;
+        margin: 0px auto;
+        font-size: 22px;
+        letter-spacing: 0.7px;
+        width: 80%;
+        line-height: 47px;
+
+        h2 {
+          position: absolute;
+          top: 120px;
+        }
+      }
+
+      .block-overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgb(0, 0, 0, 0.3);
+        top: 0;
+      }
+    }
+  }
+
+  .third-block {
+    display: flex;
+    width: 100%;
+    margin-top: -2px;
+
+    .slider-container {
+      width: 60%;
+      height: 620px;
+      position: relative;
+
+      .slider-block {
+        position: relative;
+        height: 620px;
+
+        .slider-item {
+          transition: opacity 0.5s linear;
+          width: 100%;
+          position: absolute;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .text-container {
+      width: 40%;
+      display: flex;
+
+      .text-block {
+        width: 100%;
+        position: relative;
+      }
+    }
+  }
+}
+
+#stepsToOwning {
+  background-color: v.$colorRed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .description {
+    color: v.$colorWhite;
+    font-size: 16px;
+  }
+}
+
+.all-steps {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  flex-wrap: wrap;
+
+  svg {
+    height: 60px;
+  }
+
+  h3 {
+    margin: 20px auto;
+    font-size: 18px;
+    color: v.$colorYellow;
+  }
+
+  p {
+    padding-right: 40px;
+  }
+
+  .two-steps {
+    width: 100%;
+    display: flex;
+
+    .step-one, .step-two {
+      width: 8%;
+    }
+
+    .step-one-text, .step-two-text {
+      width: 42%;
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .third-step {
+    display: flex;
+    width: 100%;
+    margin: 50px auto;
+
+    .step-three {
+      width: 8%;
+    }
+
+    .step-three-text {
+      width: 92%;
+    }
+  }
+}
+
+#stepsToOwning {
+  .all-steps {
+    margin: 50px auto;
+  }
+}
+
+#brands {
+  background-color: v.$colorRed;
+
+  .brands-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    position: relative;
+    background-color: v.$colorWhite;
+
+    h2 {
+      font-size: 80px;
+    }
+
+    h5 {
+      font-size: 25px;
+      margin: 25px auto;
+    }
+
+    .description {
+      width: 50%;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .brand-icons-block {
+      display: flex;
+      flex-wrap: wrap;
+      width: 60%;
+      justify-content: space-between;
+      margin: 50px auto;
+
+      .brand-icon {
+        height: 80px;
+        width: 23%;
+        object-fit: contain;
+        margin: 10px auto;
+      }
+    }
+  }
+}
+
+#experience {
+  background-color: v.$colorRed;
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  flex-direction: column;
+
+  h2 {
+    font-size: 95px;
+  }
+
+  h3 {
+    font-size: 22px;
+    text-transform: uppercase;
+    margin: 50px auto;
+    letter-spacing: 2px;
+  }
+
+  .description {
+    font-size: 18px;
+    width: 80%;
+    color: v.$colorWhite;
+    text-align: center;
+  }
+
+  .button-block {
+    margin-top: 50px;
+
+    .button-get-started {
+      @include m.buttonGetStarted(v.$colorBlack, v.$colorYellow, v.$colorWhite, v.$colorBlack, 310px, 60px);
+    }
+  }
+}
+
+#promises {
+   .slider-container {
+     position: relative;
+     width: 100%;
+
+     .slider-block {
+       position: relative;
+       height: 100vh;
+
+       .slider-item {
+         transition: opacity 0.5s linear;
+         width: 100%;
+         position: absolute;
+         height: 100%;
+         object-fit: cover;
+       }
+     }
+
+     .block-overlay {
+      position: absolute;
+       left: 0;
+       right: 0;
+       top:25%;
+
+       .title {
+         display: flex;
+         justify-content: center;
+       }
+     }
+   }
+}
+
+#joinUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: v.$colorBlack;
+  padding: 50px;
+
+  .pizzeria-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 80%;
+    }
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 28px;
+    margin: 50px auto;
+    color: v.$colorWhite;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+
+  .form-block {
+    width: 80%;
+    margin: 50px auto;
+
+    #joinUsForm {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .input-block {
+        display: flex;
+        flex-direction: column;
+        color: v.$colorWhite;
+        margin: 10px 20px;
+
+        input, select {
+          height: 35px;
+          border-radius: 15px;
+          padding: 4px;
+          box-sizing: border-box;
+          margin: 8px 0px;
+        }
+
+        textarea {
+          border-radius: 15px;
+          padding: 4px;
+          box-sizing: border-box;
+          margin: 8px 0px;
+        }
+      }
+
+      .checkbox-block {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+
+        input {
+          margin: 0px 10px;
+        }
+      }
+
+      .one-part {
+        flex-grow: 1;
+        width: 100%;
+      }
+
+      .two-part {
+        flex-grow: 1;
+        width: 42%;
+      }
+
+      .three-part {
+        flex-grow: 1;
+        width: 28%;
+      }
+
+      .button-block {
+        margin: 50px auto 0px auto;
+
+        .button-get-started {
+          @include m.buttonGetStarted(v.$colorWhite, v.$colorRed, v.$colorYellow, v.$colorBlack, 310px, 60px);
+        }
+      }
+    }
+  }
+}
